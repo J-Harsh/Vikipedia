@@ -25,7 +25,6 @@ const Results = () => {
   
 
   if(isLoading) return <Loading/>
-  console.log(location.pathname);
   switch (location.pathname) {
     case '/search':
       return (

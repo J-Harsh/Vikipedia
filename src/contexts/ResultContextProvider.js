@@ -2,7 +2,7 @@ import React, {createContext,useContext,useState} from "react";
 import axios from 'axios'
  
 const ResultContext=createContext();
-const baseUrl="https://google-search3.p.rapidapi.com/api/v1";
+const baseUrl="https://seo-api.p.rapidapi.com/v1";
 
 
 export const ResultContextProvider = ({children}) => {
@@ -18,12 +18,11 @@ export const ResultContextProvider = ({children}) => {
           headers: {
             'X-User-Agent': 'desktop',
             'X-Proxy-Location': 'EU',
-            'x-rapidapi-host': 'google-search3.p.rapidapi.com',
-            'x-rapidapi-key': 'bd51ba88e2mshd408351c12df16ap1f0d21jsnc1a6958747cd',
+            'x-rapidapi-host': 'seo-api.p.rapidapi.com',
+            'x-rapidapi-key': 'c00b6040f3msh3eadd61ee187dfdp1d6438jsn6c3af8c5c98b',
           },
         });
         const data = await res.json();
-        console.log(data);
 
         setResults(data);
         setIsLoading(false);
